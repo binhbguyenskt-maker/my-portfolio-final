@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A responsive student portfolio featuring web projects, a gallery, and accessible interactions.">
+  <title>My Portfolio | Web Design & Development</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="#home" aria-label="My Portfolio, back to top"><span class="brand-mark" aria-hidden="true">&lt;/&gt;</span> MyPortfolio</a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li><li><a href="#projects">Projects</a></li><li><a href="#about">About</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">Dark mode</button>
+    </div>
+  </header>
+  <main id="main">
+    <section id="home" class="hero section-pad" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div><p class="eyebrow">STUDENT WEB PORTFOLIO</p><h1 id="hero-title">Hi, I'm a Web Design Student.</h1><p class="hero-copy">I enjoy building simple, useful, and accessible websites. This portfolio shares my practice projects and the skills I am learning.</p><div class="hero-actions"><a class="button primary" href="#projects">View my work</a><a class="button outline" href="#contact">Contact me</a></div></div>
+        <img class="hero-image" src="assets/hero.svg" alt="Illustration of a laptop displaying a colorful website beside a plant" width="640" height="480">
+      </div>
+    </section>
+    <section id="projects" class="section-pad" aria-labelledby="projects-title"><div class="container"><p class="eyebrow">MY WORK</p><h2 id="projects-title">Featured Projects</h2><p class="section-intro">These are example projects made while learning HTML, CSS, and JavaScript.</p>
+      <div class="filters" role="group" aria-label="Filter projects"><button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All</button><button class="filter-button" type="button" data-filter="html">HTML & CSS</button><button class="filter-button" type="button" data-filter="javascript">JavaScript</button></div>
+      <div class="project-grid" id="project-list">
+        <article class="project-card" data-category="html"><img src="assets/city.svg" alt="Illustrated city streets with buildings and trees" width="640" height="400"><div class="card-copy"><span class="tag">HTML & CSS</span><h3>Vietnam City Walks</h3><p>A responsive website about city travel, places, and photography.</p><a href="https://github.com/binhbguyenskt-maker/vietnam-city-walks" target="_blank" rel="noopener noreferrer">See source code <span aria-hidden="true">↗</span></a></div></article>
+        <article class="project-card" data-category="javascript"><img src="assets/gallery.svg" alt="Illustration of a colorful photo gallery interface" width="640" height="400"><div class="card-copy"><span class="tag">JavaScript</span><h3>Interactive Photo Gallery</h3><p>A gallery with image previews and accessible keyboard interactions.</p><a href="https://github.com/binhbguyenskt-maker/javascript-final-gallery" target="_blank" rel="noopener noreferrer">See source code <span aria-hidden="true">↗</span></a></div></article>
+        <article class="project-card" data-category="html"><img src="assets/nature.svg" alt="Illustrated landscape with hills, a river, and sunlight" width="640" height="400"><div class="card-copy"><span class="tag">HTML & CSS</span><h3>Responsive Nature Page</h3><p>A simple page that adapts its layout to phones, tablets, and desktops.</p><a href="https://github.com/binhbguyenskt-maker/responsive-final-project" target="_blank" rel="noopener noreferrer">See source code <span aria-hidden="true">↗</span></a></div></article>
+      </div><p id="filter-status" class="sr-only" aria-live="polite"></p>
+    </div></section>
+    <section id="about" class="section-pad soft-section" aria-labelledby="about-title"><div class="container about-grid"><img src="assets/about.svg" alt="Illustration of a student working on a laptop at a desk" width="640" height="480"><div><p class="eyebrow">NICE TO MEET YOU</p><h2 id="about-title">About Me</h2><p>I am a student learning front-end development. I practice writing clean HTML, creating responsive layouts in CSS, and adding useful features with JavaScript.</p><p>I care about clear design, readable text, and websites that people can use with a keyboard.</p><div class="skill-list" aria-label="My skills"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Responsive Design</span><span>Accessibility</span></div></div></div></section>
+    <section id="gallery" class="section-pad" aria-labelledby="gallery-title"><div class="container"><p class="eyebrow">INSPIRATION</p><h2 id="gallery-title">My Creative Gallery</h2><p class="section-intro">Select any image to view a larger version. You can also use the keyboard.</p><div class="gallery-grid">
+      <button class="gallery-item" type="button" data-src="assets/city.svg" data-caption="City Walks"><img src="assets/city.svg" alt="Colorful illustration of a city neighborhood" width="640" height="400"><span>City Walks</span></button>
+      <button class="gallery-item" type="button" data-src="assets/nature.svg" data-caption="Nature and Rivers"><img src="assets/nature.svg" alt="Sunlit hills and a winding river" width="640" height="400"><span>Nature and Rivers</span></button>
+      <button class="gallery-item" type="button" data-src="assets/gallery.svg" data-caption="Creative Layouts"><img src="assets/gallery.svg" alt="Colorful panels showing a photo gallery design" width="640" height="400"><span>Creative Layouts</span></button>
+      <button class="gallery-item" type="button" data-src="assets/hero.svg" data-caption="Web Design"><img src="assets/hero.svg" alt="Laptop showing a colorful web page" width="640" height="480"><span>Web Design</span></button>
+    </div></div></section>
+    <section id="contact" class="section-pad soft-section" aria-labelledby="contact-title"><div class="container contact-grid"><div><p class="eyebrow">SAY HELLO</p><h2 id="contact-title">Get in Touch</h2><p>This is a demonstration contact form. It checks your input locally and does not send any message to a server.</p><p>To contact me, use the project links above.</p></div><form id="contact-form" class="contact-form" novalidate><label for="name">Your name</label><input id="name" name="name" type="text" autocomplete="name" minlength="2" required><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" required><label for="message">Your message</label><textarea id="message" name="message" rows="5" minlength="10" required></textarea><button class="button primary" type="submit">Check my message</button><p id="form-status" role="status" aria-live="polite"></p></form></div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-row"><p>© <span id="year">2026</span> MyPortfolio. A student web design project.</p><a href="#home">Back to top ↑</a></div></footer>
+  <dialog id="image-dialog" aria-label="Larger gallery image"><div class="dialog-top"><strong id="dialog-title"></strong><button id="close-dialog" type="button" aria-label="Close image preview">Close ×</button></div><img id="dialog-image" alt="" width="640" height="480"></dialog>
+</body>
+</html>
